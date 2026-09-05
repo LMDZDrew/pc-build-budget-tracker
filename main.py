@@ -19,6 +19,11 @@ for component in component_names:
 total_cost = sum(parts.values())
 remaining_budget = budget - total_cost
 
+print("\n--- Build Summary ---")
+
+for component, price in parts.items():
+    print(f"{component}: ${price:.2f}")
+
 print(f"\nTotal Build Cost: ${total_cost:.2f}")
 print(f"Remaining Budget: ${remaining_budget:.2f}")
 
