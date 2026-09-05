@@ -1,7 +1,13 @@
 while True:
     try:
         budget = float(input("What is your PC budget? $"))
+
+        if budget <= 0:
+            print("Budget must be greater than $0.")
+            continue
+
         break
+
     except ValueError:
         print("Please enter a valid number.")
 
@@ -21,8 +27,14 @@ for component in component_names:
     while True:
         try:
             price = float(input(f"How much does your {component} cost? $"))
+
+            if price < 0:
+                print("Price cannot be negative.")
+                continue
+
             parts[component] = price
             break
+
         except ValueError:
             print("Please enter a valid number.")
 
@@ -39,7 +51,9 @@ print(f"Remaining Budget: ${remaining_budget:.2f}")
 
 if remaining_budget > 0:
     print(f"You are within budget with ${remaining_budget:.2f} remaining!")
+
 elif remaining_budget == 0:
     print("You used your entire budget!")
+
 else:
     print(f"You are over budget by ${abs(remaining_budget):.2f}!")
