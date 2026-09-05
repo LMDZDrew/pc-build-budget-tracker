@@ -6,9 +6,16 @@ motherboard = float(input("How much does your Motherboard cost? $"))
 storage = float(input("How much does your Storage cost? $"))
 power_supply = float(input("How much does your Power Supply cost? $"))
 case = float(input("How much does your Case cost? $"))
-remaining_budget = budget - cpu - gpu - ram - motherboard - storage - power_supply - case
 
+
+total_cost = cpu + gpu + ram + motherboard + storage + power_supply + case
+
+remaining_budget = budget - total_cost
+
+
+print(f"Total Build Cost: ${total_cost:.2f}")
 print(f"Remaining Budget: ${remaining_budget:.2f}")
+
 
 if remaining_budget > 0:
     print(f"You are within budget with ${remaining_budget:.2f} remaining!")
