@@ -1,28 +1,36 @@
-# pc-build-budget-tracker
-A Python application for planning PC builds and tracking component costs against a target budget.
+# PC Build Budget Tracker
+
+A simple Python command-line application for planning a PC build and checking whether the total cost stays within a selected budget.
 
 ## Features
 
-- Stores PC components and prices
+- Custom PC budget input
+- Tracks prices for major PC components
 - Calculates total build cost
-- Compares build cost against a budget
-- Shows whether the build is over or under budget
+- Displays remaining budget
+- Detects when a build is over budget
+- Validates invalid and negative user input
+- Displays an itemized build summary
 
-## Why I Built This
+## Components Tracked
 
-I enjoy building PCs and wanted to create a simple tool that combines that interest with learning Python and software development.
+- CPU
+- GPU
+- RAM
+- Motherboard
+- Storage
+- Power Supply
+- Case
 
-## Technologies
+## Technologies Used
 
 - Python 3
 - Git
 - GitHub
 
-## Future Improvements
+## How to Run
 
-- User input for components
-- Save and load builds
-- Multiple build configurations
-- Compatibility checking
-- Graphical interface
-- Component price tracking
+1. Clone the repository:
+
+```bash
+git clone https://github.com/LMDZDrew/pc-build-budget-tracker.git
